@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #56ab2f, #4ca1af); /* fioletowo-turkusowy gradient */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ade8f4, #90e0ef); /* nowy kontrastowy gradient dla każdego elementu */
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #023e8a; 
+  transition: all 0.3s ease;
+}
+
+.item span.bought {
+  text-decoration: line-through;
+  color: #6c757d; 
+}
+
+button {
+  padding: 5px 12px;
+  margin: 0 3px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button.remove {
+  background-color: #e63946;
+  color: white;
+}
+
+button.remove:hover {
+  background-color: #c62828;
+}
+
+button.quantity {
+  background-color: #457b9d;
+  color: white;
+}
+
+button.quantity:hover {
+  background-color: #1d3557;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #023e8a; 
+}
+
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.message.success {
+  color: green;
+}
+.message.error {
+  color: red;
+}
